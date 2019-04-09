@@ -13,7 +13,7 @@ import requests
 
 def get_access_token():
     # client_id 为官网获取的AK， client_secret 为官网获取的SK
-    host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=4kNGB6CtFQ17pdxE99i7KOWe&client_secret=Dg8stymbGtV2LUFxsW1z55I8ZUlkhxxa'
+    host = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=CLIENT_ID&client_secret=CLIENT_SECRET'
 
     headers = {'Content-Type': 'application/json; charset=UTF-8'}
     content = requests.get(host, headers=headers).json()
@@ -46,7 +46,7 @@ def img_2_string(path, at, classifierId):
         first = content['data']['ret'][0]['word']
         second = content['data']['ret'][1]['word']
         tempId = content['data']['templateSign']
-        if tempId == 'ac296a193fa571cea7e47d0126e4f21e':
+        if tempId == 'TEMPLATE_ID':
 
             third = "质检报告"
         else:
